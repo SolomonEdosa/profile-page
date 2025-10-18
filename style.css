@@ -1,0 +1,102 @@
+/* 1. Basic Reset and Page Centering */
+body {
+    background-color: #f0f0f0; /* Light background for contrast */
+    display: flex; /* Flexbox is great for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it takes up the full screen height */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+}
+
+/* 2. The Main Card Container */
+.profile-card {
+    width: 350px; /* Set the desired width of the card */
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px; /* Creates the rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+    text-align: center; /* Center all text and inline elements inside the card */
+}
+
+/* 3. Styling the Picture and Header */
+.profile-header h1 {
+    color: #333; /* Dark color for the name */
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px auto; /* Centers the picture container */
+    border-radius: 50%; /* <<<<< THIS MAKES IT A CIRCLE! */
+    overflow: hidden; /* Ensures the image doesn't escape the circle border */
+    border: 3px solid #ddd;
+}
+
+/* Make the image fill the circular container */
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* 4. Social Links (Buttons) */
+.social-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around; /* Distributes the buttons evenly */
+}
+
+.btn {
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 5. Hobbies/Dislikes Lists Styling */
+.info-section {
+    text-align: left; /* Pushes the text back to the left for easy reading */
+    margin-top: 20px;
+}
+
+.info-section h2 {
+    color: #555;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.info-section ul {
+    list-style: disc; /* Use a default bullet point style */
+    padding-left: 20px;
+    margin: 0;
+}
+
+.info-section li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* 6. Current Time Section */
+.time-section {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+#live-time {
+    font-weight: bold;
+    color: #333;
+}
