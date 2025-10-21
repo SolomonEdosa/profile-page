@@ -3,58 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile card</title>
+    <title>Osasenaga Solomon | Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
-    <div class="profile-card">
 
-        <div class="profile-header">
-            <h1>Osasenaga Edosa Solomon</h1>
-            
-            <div class="profile-picture">
-                <img src="./images/passport.jpg" alt="Solomon picture">
-            </div>
-            
-            <p class="job-title">frontend Developer, business mogul</p>
-        </div>
-        <div class="time-section">
-            <p>Current time (sec):</p>
-            <p id="live-time">loading...</p> 
-        </div>
+    <header class="navbar">
+        <nav>
+            <a href="#" class="nav-link active" onclick="showPage('home-content', this)">Home</a>
+            <a href="#" class="nav-link" onclick="showPage('about-content', this)">About Me</a>
+            <a href="#" class="nav-link" onclick="showPage('contact-content', this)">Contact Us</a>
+        </nav>
+    </header>
 
-        <div class="social-links">
-            <a href="#" class="btn">Twitter</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn">LinkedIn</a>
-        </div>
+    <main>
+        <div id="home-content" class="content-wrapper"> 
+            <div class="profile-card">
 
-        <div class="info-section">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Traveling</li>
+                <div class="profile-header">
+                    <h1>Osasenaga Edosa Solomon</h1>
+                    
+                    <div class="profile-picture">
+                        <img src="./images/passport.jpg" alt="Solomon picture">
+                    </div>
+                    
+                    <p class="job-title">frontend Developer, business mogul</p>
+                </div>
+                <div class="time-section">
+                    <p>Current time (sec):</p>
+                    <p id="live-time">loading...</p> 
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="btn">Twitter</a>
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn">LinkedIn</a>
+                </div>
+
+                <div class="info-section">
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Traveling</li>
+                        <li>Coding</li>
+                        <li>Drawing</li>
+                        <li>Sleeping</li>
+                    </ul>
+                </div>
                 
-                <li>Coding</li>
-                <li>Drawing</li>
-               
-                <li>Sleeping</li>
-            </ul>
+                <div class="info-section">
+                     <h2>Dislikes</h2>
+                    <ul>
+                        <li>Lies</li>
+                        <li>Ego</li>
+                        <li>Drinking</li>
+                        <li>Smoking</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="info-section">
-             <h2>Dislikes</h2>
-            <ul>
-                <li>Lies</li>
-                <li>Ego</li>
-                 <li>Drinking</li>
-                 <li>Smoking</li>
-            </ul>
+
+        <div id="about-content" class="content-wrapper" style="display: none;">
+            <div class="profile-card">
+                <h2 class="section-header gradient-header">About Me</h2>
+                <p>
+                    I have  alwasy been curious on how websites work ,but it took me some time to finally take the first step into webs design. i started learning recently and it has been a journey full of new discoveries , small wins and challenges that push me to grow .  
+                </p>
+
+                <h2 class="section-header gradient-header">Who I Am</h2>
+                <p>
+                    I'm Osasenaga Edosa Solomon, a Frontend Developer,  a business mogul. based in NIGERIA and looking forward to the thrilling experience that comes with being a designer.
+                </p>
+
+                <h2 class="section-header gradient-header">My Goals</h2>
+                <ul>
+                    <li>To learn webdesign fully and become a full stack designer .</li>
+                    <li>To work with bright minded people and develop problem solving websites for people .</li>
+                    
+                </ul>
+
+
+                <h2 class="section-header gradient-header">Area of Low Confidence</h2>
+                <p>
+                   Basically i am struggling with understanding Javascript, React, and others.
+                </p>
+
+
+                <h2 class="section-header gradient-header">NOTE TO FUTURE SELF </h2>
+                <p>
+                    Hey solomon , i just want to tell you it is definitely going to be worth it ,you have come a long way and it is a pleasure being you!
+                </p>
+
+
+                <h2 class="section-header gradient-header">Final Thoughts</h2>
+                <p>
+                   Keep your head high and chest out , it is currently a tough road but you are tougher .
+                </p>
+            </div>
         </div>
-    </div>
+
+        <div id="contact-content" class="content-wrapper" style="display: none;">
+            <div class="profile-card">
+                <h2 class="form-title">Contact Us</h2>
+                <form>
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" placeholder="Your full name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="name@example.com">
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="subject">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Your message...."></textarea>
+
+                    <button type="submit" class="gradient-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer class="main-footer">
+        &copy; 2025 Osasenaga Edosa Solomon, Frontend Developer
+    </footer>
     
     <script src="script.js"></script>
-</body>
-        
 </body>
 </html>

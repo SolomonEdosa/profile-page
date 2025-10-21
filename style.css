@@ -1,58 +1,108 @@
-/* 1. Basic Reset and Page Centering */
+/* 1. Global Reset and Dark Theme Setup */
 body {
-    background-color: #f0f0f0; /* Light background for contrast */
-    display: flex; /* Flexbox is great for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure it takes up the full screen height */
+    /* Sets the dark background for the whole page */
+    background-color: #110e19; 
+    color: #e0e0e0;
+    font-family: sans-serif; 
     margin: 0;
-    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    padding: 0;
+    /* Setup for centering the content */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh; 
 }
 
-/* 2. The Main Card Container */
+/* 2. Main Wrapper for the Content Card (for JS) */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* Creates space between the "hanging" navbar and the main card */
+    margin-top: 20px; 
+}
+
+/* 3. The Main Card Container Styling (Dark, Glowing) */
 .profile-card {
-    width: 350px; /* Set the desired width of the card */
-    background-color: white;
+    width: 350px; 
+    /* Dark, inner color */
+    background-color: #1a0833; 
     padding: 30px;
-    border-radius: 15px; /* Creates the rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
-    text-align: center; /* Center all text and inline elements inside the card */
+    border-radius: 20px; 
+    text-align: center;
+    /* KEY: The subtle outer glow effect */
+    box-shadow: 
+        0 0 15px rgba(130, 212, 192, 0.4), /* Teal glow */
+        0 0 10px rgba(183, 149, 255, 0.4); /* Purple glow */
 }
 
-/* 3. Styling the Picture and Header */
+/* 4. Navigation Bar Styling (The "Hanging" Look) */
+.navbar {
+    width: 90%; 
+    max-width: 380px; /* Limits the width to make it 'hang' */
+    background-color: #1a0833; 
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around; 
+    border-radius: 10px; /* Rounded corners */
+    
+    /* Subtle glow on the navbar too */
+    box-shadow: 0 0 10px rgba(130, 212, 192, 0.3);
+    
+    margin-top: 20px; 
+}
+
+.nav-link {
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link.active {
+    color: #ffffff;
+    border-bottom: 2px solid #82d4c0; 
+}
+
+/* 5. Profile Header and Picture */
 .profile-header h1 {
-    color: #333; /* Dark color for the name */
+    color: #b795ff; /* Purple accent for the name */
     font-size: 24px;
     margin-bottom: 15px;
+}
+
+.job-title {
+    color: #a0a0a0;
 }
 
 .profile-picture {
     width: 120px;
     height: 120px;
-    margin: 0 auto 20px auto; /* Centers the picture container */
-    border-radius: 50%; /* <<<<< THIS MAKES IT A CIRCLE! */
-    overflow: hidden; /* Ensures the image doesn't escape the circle border */
-    border: 3px solid #ddd;
+    margin: 0 auto 20px auto; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 3px solid #330d66; 
 }
 
-/* Make the image fill the circular container */
 .profile-picture img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover;
 }
 
-/* 4. Social Links (Buttons) */
+/* 6. Social Links (Buttons) */
 .social-links {
     margin: 20px 0;
     display: flex;
-    justify-content: space-around; /* Distributes the buttons evenly */
+    justify-content: space-around; 
 }
 
 .btn {
     text-decoration: none;
-    color: #007bff;
-    border: 1px solid #007bff;
+    color: #82d4c0; 
+    border: 1px solid #82d4c0;
+    background-color: transparent;
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 14px;
@@ -60,43 +110,129 @@ body {
 }
 
 .btn:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: #82d4c0;
+    color: #1a0833; 
 }
 
-/* 5. Hobbies/Dislikes Lists Styling */
+/* 7. Hobbies/Dislikes Lists Styling */
 .info-section {
-    text-align: left; /* Pushes the text back to the left for easy reading */
+    text-align: left; 
     margin-top: 20px;
 }
 
 .info-section h2 {
-    color: #555;
+    color: #ffb3ff; 
     font-size: 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #330d66;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
 .info-section ul {
-    list-style: disc; /* Use a default bullet point style */
+    list-style: square; 
     padding-left: 20px;
     margin: 0;
 }
 
 .info-section li {
     margin-bottom: 5px;
-    color: #555;
+    color: #d1c4e9;
 }
 
-/* 6. Current Time Section */
+/* 8. Current Time Section */
 .time-section {
     margin: 15px 0;
     font-size: 14px;
-    color: #888;
+    color: #a0a0a0;
 }
 
 #live-time {
     font-weight: bold;
-    color: #333;
+    color: #82d4c0;
+}
+
+
+/* 9. NEW PAGE STYLES (ABout Me and Contact Us) */
+
+/* --- About Me Page Styling (Gradient Headers) --- */
+.section-header {
+    color: #1a0833; 
+    text-align: center;
+    padding: 10px 15px; 
+    margin-top: 25px; 
+    margin-bottom: 15px; 
+    border-radius: 6px; 
+    font-weight: 700;
+    font-size: 1.5em; 
+}
+
+.gradient-header {
+    background: linear-gradient(90deg, #b795ff, #82d4c0, #ffb3ff);
+}
+
+.profile-card p, 
+.profile-card ul {
+    color: #d1c4e9; 
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* --- Contact Us Page Styling (Form) --- */
+.form-title {
+    color: #ffb3ff; 
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: #d1c4e9;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a164a; 
+    border: 1px solid #330d66; 
+    color: #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+.gradient-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1a0833; 
+    background: linear-gradient(90deg, #b795ff, #82d4c0, #ffb3ff);
+}
+
+/* --- Footer/Copyright Styling --- */
+.main-footer {
+    /* Use padding to create space from the bottom */
+    padding: 30px 0 40px 0; 
+    
+    /* Ensure the footer is centered beneath the main content */
+    width: 100%;
+    max-width: 450px; 
+    text-align: center;
+    
+    /* Subtle text color */
+    color: #a0a0a0; 
+    font-size: 0.85em;
+    
+    /* Optional: Add a subtle text shadow/glow to match the design aesthetic */
+    text-shadow: 0 0 5px rgba(183, 149, 255, 0.2);
 }
